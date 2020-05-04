@@ -2,7 +2,8 @@ pipeline {
    agent any
    environment {
       def AWS_REGION = "ap-southeast-2" // Region to create EC2 infrastructure in
-      AWS_ROLE = "arn:aws:iam::311824497502:role/tf-role" // AWS role used to create aws infra
+      def AWS_ID = "AWS_ID"
+      def AWS_ROLE = "arn:aws:iam::311824497502:role/tf-role" // AWS role used to create aws infra
    }
  stages {
     stage('Build') {
