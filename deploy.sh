@@ -4,7 +4,7 @@
 set -e
 cd $(dirname $0)
 
-rm -rf .terraform/dev
+rm -rf .terraform/environment
 terraform init -input=false
 terraform workspace select rds-dev || terraform workspace new rds-dev
 terraform plan -input=false
