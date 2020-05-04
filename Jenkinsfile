@@ -10,7 +10,7 @@ pipeline {
  stages {
     stage('Build') {
       steps {
-         withAWS(region: AWS_REGION, role: AWS_ROLE, roleAccount: ACCT, externalId: EXT_ID) {
+         withAWS(region: AWS_REGION, role: AWS_ROLE, roleAccount: ACCT, externalId: EXT_ID, duration: 900, roleSessionName: 'jenkins-session') {
          sh './deploy.sh'
          }
       }
