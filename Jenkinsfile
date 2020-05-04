@@ -10,7 +10,9 @@ pipeline {
  stages {
     stage('Build') {
       steps {
+         withAWS(region: AWS_REGION, role: AWS_ROLE, roleAccount: ACCT, externalId: EXT_ID) {
          sh './deploy.sh'
+         }
       }
     } 
     stage('Terraform Plan') { 
