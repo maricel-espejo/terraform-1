@@ -9,7 +9,7 @@ pipeline {
  stages {
     stage('Build') {
       steps {
-         withAWS(region: AWS_REGION) {
+         withAWS(region: AWS_REGION, role: AWS_ID) {
          sh './deploy.sh'
          }
       }
