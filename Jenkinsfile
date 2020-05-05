@@ -8,7 +8,7 @@ pipeline {
  stages {
     stage('Build') {
       steps {
-         withAWS(region: 'ap-southeast-2' , roleAccount: ACCT, role: 'arn:aws:iam::311824497502:role/tf-role', duration: 900, roleSessionName: 'jenkins-session') {
+         withAWS(region: 'ap-southeast-2' , roleAccount: ACCT, role: 'arn:aws:iam::311824497502:role/MESPEJO-ACCT-ROLE', duration: 900, roleSessionName: 'jenkins-session') {
          sh './deploy.sh'
          }
       }
