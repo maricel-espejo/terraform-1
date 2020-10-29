@@ -15,7 +15,7 @@ pipeline {
     } 
     stage('Terraform Plan') { 
       steps {
-        echo 'Done.'
+        echo 'Done. Test'
       }
     }
  }
